@@ -9,7 +9,12 @@ public class Word {
     private String mDefaultTranslation;
 
     /** stores image resource ID **/
-    private int mImageResourceID;
+    private int mImageResourceID = NO_IMAGE_PROVIDED;
+
+    /** static final value used to check if
+     * an image resource id was given
+     */
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * create a new word object
@@ -18,7 +23,8 @@ public class Word {
      * @param miwokTranslation
      */
     public Word(String defaultTranslation, String miwokTranslation) {
-        new Word(defaultTranslation, miwokTranslation, -1);
+        mMiwokTranslation = miwokTranslation;
+        mDefaultTranslation = defaultTranslation;
     }
 
     public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
@@ -37,5 +43,9 @@ public class Word {
 
     public int getImageResourceId() {
         return mImageResourceID;
+    }
+
+    public boolean hasImage() {
+            return mImageResourceID != NO_IMAGE_PROVIDED;
     }
 }
