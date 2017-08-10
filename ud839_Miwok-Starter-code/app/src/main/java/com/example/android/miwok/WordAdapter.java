@@ -38,8 +38,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         }
 
+        /**
+         * adds specific color to the view's background
+         */
         ((LinearLayout) listItemView.findViewById(R.id.text_layout))
                 .setBackgroundColor(ContextCompat.getColor(getContext(), mColorResource));
+        /**
+         * add translated and default word
+         */
         ((TextView) listItemView.findViewById(R.id.miwok_text_view))
                 .setText(mWordList.get(position).getMiwokTranslation());
         ((TextView) listItemView.findViewById(R.id.default_text_view))
