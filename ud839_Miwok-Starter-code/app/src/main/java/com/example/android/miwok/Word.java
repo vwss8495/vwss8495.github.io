@@ -17,20 +17,27 @@ public class Word {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
+     * sound file for miwok translation
+     */
+    private int mSoundResourceID;
+
+    /**
      * create a new word object
      *
      * @param defaultTranslation
      * @param miwokTranslation
      */
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int soundResourceID) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
+        mSoundResourceID = soundResourceID;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID, int soundResourceID) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceID = imageResourceID;
+        mSoundResourceID = soundResourceID;
     }
 
     public String getMiwokTranslation() {
@@ -47,5 +54,9 @@ public class Word {
 
     public boolean hasImage() {
             return mImageResourceID != NO_IMAGE_PROVIDED;
+    }
+
+    public int getSoundResourceID() {
+        return mSoundResourceID;
     }
 }
