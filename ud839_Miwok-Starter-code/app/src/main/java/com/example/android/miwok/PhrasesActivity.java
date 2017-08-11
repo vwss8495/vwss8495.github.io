@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
@@ -40,6 +41,9 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        // create audiomanager to request audio focus
+        mAudioManager = (AudioManager) PhrasesActivity.this.getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
