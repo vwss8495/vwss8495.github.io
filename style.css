@@ -1,0 +1,11 @@
+body {
+    background:#101010;
+}
+
+.construction {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-family: sans-serif, 'Times New Roman';
+  font-size: 56px;
+}
