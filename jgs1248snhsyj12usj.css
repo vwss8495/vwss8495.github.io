@@ -2,28 +2,15 @@
   margin: 0;
   padding: 0;
   outline: none;
-  font-size: 16px;
-  border:  2px solid red;
 }
 
 body {
   background-color: #1B1B1B;
 }
 
-#logo {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
-
-#logo img {
-  width: 10rem;
-  height: auto;
-}
-
 .navbar {
-  position: fixed;
-  top: 0;
+  font-size: 28px;
+  font: "Roboto", "sans-serif";
 }
 
 .navbar ul {
@@ -31,9 +18,17 @@ body {
   overflow: hidden;
   background-color: #101010;
   position: fixed;
-  height: auto;
+  top: 0;
+  height: 9%;
   width: 100%;
+  z-index: 2;
 } 
+
+#logo {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
 
 .navbar li {
   float: left;
@@ -41,24 +36,26 @@ body {
   left: 10%;
 }
 
-.navbutton li a{
-  font-size: 2rem;
+.navbar li a, li2 a{
   display: block;
   color: white;
   text-align: center;
-  padding: 0.875rem 1rem;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-.navbutton li a:hover {
+.navbar li a:hover, li2 a:hover {
   background-color: #44A9C6;
 }   
 
-.textarea {
-  position: relative;
-  top: 10rem;
+.navbar li2 {
+  float: right;
 }
 
+.textarea {
+  position: relative;
+  top: 150px;
+}
 .textarea p {
   text-align: left;
   color: white;
