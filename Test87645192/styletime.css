@@ -23,6 +23,9 @@ p {
     padding: 5%;
     text-align: justify;
 }
+a {
+    outline: none;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -35,7 +38,7 @@ header {
     height: 86px;
 }
 #navbar{
-    max-width: 1200px; /** ---------------------recheck original was 1200px changed to 100% then back------------------- **/
+    max-width: 80%; /** ---------------------recheck original was 1200px changed to 100% then back------------------- **/
     margin: 0 auto;
 }
 #logo {
